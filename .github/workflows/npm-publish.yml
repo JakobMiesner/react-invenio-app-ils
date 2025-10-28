@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: 20
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install
@@ -30,5 +30,3 @@ jobs:
           # avoid fail on warnings
           CI: false
 
-      - name: Publish on NPM
-        run: npm publish
