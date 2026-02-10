@@ -33,11 +33,11 @@
     "react": "^18.2.0",
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0",
-    "react-overridable": "^0.0.3",
+    "react-overridable": "^1.0.0",
     "react-redux": "^8.1.0",
     "react-router-dom": "^5.3.4",
     "react-scroll": "^1.9.0",
-    "react-searchkit": "^2.0.0",
+    "react-searchkit": "^3.0.0",
     "react-show-more": "^2.0.0",
     "react-tagcloud": "^2.3.0",
     "redux": "^4.2.0",
@@ -99,11 +99,11 @@
     "react": "^18.2.0",
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0",
-    "react-overridable": "^0.0.3",
+    "react-overridable": "^1.0.0",
     "react-redux": "^8.1.0",
     "react-router-dom": "^5.3.4",
     "react-scroll": "^1.9.0",
-    "react-searchkit": "^2.0.0",
+    "react-searchkit": "^3.0.0",
     "react-show-more": "^2.0.0",
     "react-tagcloud": "^2.3.0",
     "redux": "^4.2.0",
@@ -150,6 +150,20 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "overrides": {
+    "react-searchkit": {
+      "react": "$react",
+      "react-dom": "$react-dom",
+      "react-redux": "$react-redux"
+    },
+    "semantic-ui-calendar-react": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    },
+    "react-show-more": {
+      "react": "$react"
+    }
   },
   "engines": {
     "node": ">=22.0.0"
