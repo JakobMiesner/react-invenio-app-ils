@@ -5,7 +5,7 @@ export const initialState = {
   selections: [],
 };
 
-export default (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SELECT_OPTION: {
       let newSelections = [...state.selections];
@@ -29,3 +29,5 @@ export default (state = initialState, action) => {
       return state;
   }
 };
+
+export default reducer;

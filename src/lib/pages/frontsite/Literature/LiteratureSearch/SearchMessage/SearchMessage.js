@@ -23,7 +23,7 @@ class SearchMessage extends Component {
 
     const requestFormLink = (
       <Link
-        className={totalResults != 0 ? 'primary' : 'dark'}
+        className={totalResults !== 0 ? 'primary' : 'dark'}
         to={this.onClickBookRequestLink()}
       >
         this form

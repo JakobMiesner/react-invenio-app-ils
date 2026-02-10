@@ -58,7 +58,8 @@ export default class OverdueLoanSendNotificationModal extends Component {
 
   renderTrigger = () => {
     const { isLoading } = this.props;
-    const remindersCount = this.state.reminders.length;
+    const { reminders } = this.state;
+    const remindersCount = reminders.length;
     return (
       <Button
         labelPosition="right"

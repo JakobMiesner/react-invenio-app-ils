@@ -58,18 +58,18 @@ class OrderHeader extends React.Component {
     const pid = data.metadata.pid;
     const recordInfo = (
       <>
-        <label>Order</label> #{pid} <CopyButton text={pid} />
+        <span>Order</span> #{pid} <CopyButton text={pid} />
         {data.metadata.created_by && (
           <>
             <br />
-            <label className="muted">Created by</label>{' '}
+            <span className="muted">Created by</span>{' '}
             <CreatedBy metadata={data.metadata} />
           </>
         )}
         <br />
         {data.metadata.order_date && (
           <>
-            <label>Order date</label> {data.metadata.order_date}
+            <span>Order date</span> {data.metadata.order_date}
           </>
         )}
       </>

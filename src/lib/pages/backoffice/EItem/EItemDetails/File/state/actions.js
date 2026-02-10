@@ -10,6 +10,7 @@ import {
   UPLOAD_IS_LOADING,
 } from '@pages/backoffice/EItem/EItemDetails/state/actions';
 import { fetchEItemDetails } from './../../state/actions';
+
 export const HAS_ERROR = 'upload/HAS_ERROR';
 export const SUCCESS = 'upload/SUCCESS';
 export const IS_LOADING = 'upload/IS_LOADING';

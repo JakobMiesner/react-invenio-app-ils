@@ -55,6 +55,7 @@ export class LiteratureAccessUrls extends React.Component {
       <ShowMoreItems lines={invenioConfig.LITERATURE.frontsiteMaxLinks}>
         {urls.map((url, index) => (
           <AccessUrl
+            // eslint-disable-next-line react/no-array-index-key
             key={index}
             truncate={truncate}
             url={url}

@@ -33,7 +33,8 @@ export class DocumentRequestEditor extends Component {
   }
 
   get userIsEditing() {
-    return !!this.props.match.params.documentRequestPid;
+    const { match } = this.props;
+    return !!match.params.documentRequestPid;
   }
 
   fetchDocReq = async (documentRequestPid) => {

@@ -39,18 +39,19 @@ class DocumentItem extends Component {
       .query()
       .withType(invenioConfig.VOCABULARIES.item.identifier.scheme);
     vocabularyApi.list(query.qs()).then((response) => {
-      const identifiersToDisplayInFrontside =
-        this.state.identifiersToDisplayInFrontside.map((identifier) => {
-          const vocabEntry = response.data.hits.find(
-            (entry) => entry.metadata.key === identifier.key
-          );
-          return {
-            ...identifier,
-            text: vocabEntry ? vocabEntry.metadata.text : identifier.text,
-          };
-        });
-
-      this.setState({ identifiersToDisplayInFrontside });
+      this.setState((prevState) => {
+        const identifiersToDisplayInFrontside =
+          prevState.identifiersToDisplayInFrontside.map((identifier) => {
+            const vocabEntry = response.data.hits.find(
+              (entry) => entry.metadata.key === identifier.key
+            );
+            return {
+              ...identifier,
+              text: vocabEntry ? vocabEntry.metadata.text : identifier.text,
+            };
+          });
+        return { identifiersToDisplayInFrontside };
+      });
     });
   };
 
@@ -124,8 +125,7 @@ class DocumentItem extends Component {
                 <Table.HeaderCell colSpan={5} textAlign="right">
                   <div className="document-item-footer-innerWrapper">
                     <p className="document-item-footer-text">
-                      Showing entries 1-{itemsToShow.length} of{' '}
-                      {items.length}{' '}
+                      Showing entries 1-{itemsToShow.length} of {items.length}{' '}
                     </p>
                     <Button
                       compact

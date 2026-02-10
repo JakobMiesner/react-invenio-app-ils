@@ -76,4 +76,5 @@ RelationRemover.propTypes = {
 
 RelationRemover.defaultProps = {
   trigger: null,
+  relationType: null,
 };

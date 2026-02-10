@@ -38,7 +38,7 @@ export default class EItemListEntry extends Component {
               </Item.Meta>
               {eitem.metadata.doi && (
                 <>
-                  <label>DOI</label> {eitem.metadata.doi}
+                  <span>DOI</span> {eitem.metadata.doi}
                 </>
               )}
             </Grid.Column>

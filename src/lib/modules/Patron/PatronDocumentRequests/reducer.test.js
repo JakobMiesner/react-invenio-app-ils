@@ -1,5 +1,6 @@
 import reducer, { initialState } from './reducer';
 import { IS_LOADING, SUCCESS, HAS_ERROR } from './actions';
+
 describe('Fetch current patrons document requests reducer', () => {
   it('should have initial state', () => {
     expect(reducer(undefined, {})).toEqual(initialState);

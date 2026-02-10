@@ -63,3 +63,9 @@ UploadButton.propTypes = {
   isFilesLoading: PropTypes.bool,
   fluid: PropTypes.bool,
 };
+
+UploadButton.defaultProps = {
+  files: [],
+  isFilesLoading: false,
+  fluid: false,
+};

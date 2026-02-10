@@ -6,6 +6,7 @@ import {
 } from '@components/Notifications';
 import { goTo } from '@history';
 import { BackOfficeRoutes } from '@routes/urls';
+
 export const IS_LOADING = 'fetchLocationDetails/IS_LOADING';
 export const SUCCESS = 'fetchLocationDetails/SUCCESS';
 export const HAS_ERROR = 'fetchLocationDetails/HAS_ERROR';

@@ -58,16 +58,16 @@ class BorrowingRequestHeader extends React.Component {
     const pid = brwReq.pid;
     const recordInfo = (
       <>
-        <label>Borrowing request</label> #{pid} <CopyButton text={pid} />
+        <span>Borrowing request</span> #{pid} <CopyButton text={pid} />
         {brwReq.created_by && (
           <>
             <br />
-            <label className="muted">Created by</label>{' '}
+            <span className="muted">Created by</span>{' '}
             <CreatedBy metadata={brwReq} />
           </>
         )}
         <br />
-        <label>Request date</label>{' '}
+        <span>Request date</span>{' '}
         {brwReq.request_date ? brwReq.request_date : '-'}
       </>
     );

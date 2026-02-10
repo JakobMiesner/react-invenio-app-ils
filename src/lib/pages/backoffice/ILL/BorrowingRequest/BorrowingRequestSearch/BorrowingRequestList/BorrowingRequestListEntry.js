@@ -19,19 +19,19 @@ export default class BorrowingRequestListEntry extends Component {
     return (
       <>
         <Item.Description>
-          <label>status </label>
+          <span>status </span>
           {getDisplayVal('ILL_BORROWING_REQUESTS.statuses', status)}
         </Item.Description>
         <Item.Description>
-          <label>provider </label>
+          <span>provider </span>
           <Link to={ProviderRoutes.providerDetailsFor(providerPid)}>
             {provider.name}
           </Link>
         </Item.Description>
         <Item.Description>
-          <label>
+          <span>
             {invenioConfig.ILL_BORROWING_REQUESTS.fieldOverrides.due_date}{' '}
-          </label>
+          </span>
           {dueDate ? dueDate : '-'}
         </Item.Description>
       </>

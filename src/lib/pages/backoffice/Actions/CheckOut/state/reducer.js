@@ -17,7 +17,7 @@ export const initialState = {
   resultMessage: 'Insert patron id/email or physical copy barcode',
 };
 
-export default (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case CLEAR_RESULTS:
       return { ...state, queryString: '', itemList: [], patronList: [] };
@@ -50,3 +50,5 @@ export default (state = initialState, action) => {
       return state;
   }
 };
+
+export default reducer;

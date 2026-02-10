@@ -81,7 +81,8 @@ export default class DocumentTabs extends Component {
 
     const locations = sortedInternalLocationsEntries.map(
       ([internalLocationName, items]) => {
-        if (internalLocationName === LOCATION_OBJECT_TOTAL_AMOUNT_KEY) return;
+        if (internalLocationName === LOCATION_OBJECT_TOTAL_AMOUNT_KEY)
+          return null;
 
         const menuItemIsActive =
           activeInternalLocation === internalLocationName;
@@ -146,7 +147,8 @@ export default class DocumentTabs extends Component {
 
     return sortedInternalLocationEntries.map(
       ([internalLocationName, items]) => {
-        if (internalLocationName === LOCATION_OBJECT_TOTAL_AMOUNT_KEY) return;
+        if (internalLocationName === LOCATION_OBJECT_TOTAL_AMOUNT_KEY)
+          return null;
 
         return (
           <DocumentItem

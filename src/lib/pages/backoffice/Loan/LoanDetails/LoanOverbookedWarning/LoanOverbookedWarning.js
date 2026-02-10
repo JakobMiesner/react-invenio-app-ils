@@ -55,7 +55,7 @@ export default class LoanOverbookedWarning extends Component {
   render() {
     const { hasError, msg } = this.state;
     const color = hasError ? 'red' : 'yellow';
-    return <>{msg && <Message color={color}>{msg}</Message>}</>;
+    return msg ? <Message color={color}>{msg}</Message> : null;
   }
 }
 

@@ -12,6 +12,7 @@ export class UrlList extends Component {
     return (
       <List bulleted>
         {urls.map((entry, idx) => (
+          // eslint-disable-next-line react/no-array-index-key
           <List.Item key={idx}>
             <List.Content>
               <a

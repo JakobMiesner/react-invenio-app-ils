@@ -33,7 +33,7 @@ export default class RelationSerialModal extends Component {
         description={
           <>
             <SeriesAuthors authors={option.metadata.authors} />
-            {<label>By </label> && option.metadata.publisher} <br />
+            {<span>By </span> && option.metadata.publisher} <br />
           </>
         }
         disabled={disabled}
@@ -72,7 +72,7 @@ export default class RelationSerialModal extends Component {
               Provide volume index (optional)
               <br /> <br />
               <Form.Field inline key="volume">
-                <label>Volume index</label>
+                <span>Volume index</span>
                 <Input
                   name="volume"
                   type="number"
@@ -92,8 +92,7 @@ export default class RelationSerialModal extends Component {
                   <br />
                   is{' '}
                   <Label color="blue">
-                    volume{' '}
-                    {volume && <Label.Detail>{volume}</Label.Detail>}{' '}
+                    volume {volume && <Label.Detail>{volume}</Label.Detail>}{' '}
                   </Label>{' '}
                   of
                 </>

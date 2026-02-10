@@ -166,7 +166,7 @@ class CreateLoan extends React.Component {
             <Form>
               <Form.Group>
                 <Form.Field inline required>
-                  <label>Start date</label>
+                  <span>Start date</span>
                   <LocationDatePicker
                     locationPid={brwReq.patron.location_pid}
                     defaultValue={this.today}
@@ -179,7 +179,7 @@ class CreateLoan extends React.Component {
                   />
                 </Form.Field>
                 <Form.Field inline required>
-                  <label>End date</label>
+                  <span>End date</span>
                   <LocationDatePicker
                     locationPid={brwReq.patron.location_pid}
                     minDate={this.today}

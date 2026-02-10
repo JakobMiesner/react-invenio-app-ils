@@ -28,6 +28,12 @@ ResultRenderer.propTypes = {
   extra: PropTypes.string,
 };
 
+ResultRenderer.defaultProps = {
+  title: null,
+  description: null,
+  extra: null,
+};
+
 export class HitsSearch extends Component {
   constructor(props) {
     super(props);
@@ -104,7 +110,7 @@ export class HitsSearch extends Component {
           }
         : {}
     );
-  }, this.props.delay);
+  }, this.props.delay); // eslint-disable-line react/destructuring-assignment
 
   onSearchChange = (event, { value }) => {
     const { onSearchChange, minCharacters } = this.props;
@@ -219,4 +225,17 @@ HitsSearch.defaultProps = {
   alwaysWildcard: true,
   minCharacters: 3,
   delay: 250,
+  disabled: false,
+  placeholder: '',
+  serializer: null,
+  resultRenderer: null,
+  onResults: null,
+  handleKeyPress: null,
+  onSearchChange: null,
+  id: null,
+  name: null,
+  value: null,
+  onSelect: null,
+  open: undefined,
+  focus: false,
 };

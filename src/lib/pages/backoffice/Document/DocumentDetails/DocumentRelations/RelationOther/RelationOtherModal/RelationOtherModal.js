@@ -30,7 +30,7 @@ export default class RelationOtherModal extends Component {
   selectResultRender = (option, disabled) => {
     const description = (
       <>
-        <label>languages:</label>{' '}
+        <span>languages:</span>{' '}
         <DocumentLanguages languages={option.metadata.languages} />
       </>
     );
@@ -82,7 +82,7 @@ export default class RelationOtherModal extends Component {
               Note describing the relation
               <br /> <br />
               <Form.Field required inline key="note">
-                <label>Note</label>
+                <span>Note</span>
                 <Input
                   name="note"
                   onChange={(e, { value }) => this.setState({ note: value })}

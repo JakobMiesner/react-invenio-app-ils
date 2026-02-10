@@ -15,7 +15,7 @@ export class PatronDetailsLink extends Component {
         {children}
       </Link>
     ) : (
-      <>{children}</>
+      children
     );
   }
 }

@@ -6,7 +6,7 @@ export const initialState = {
   hasError: false,
 };
 
-export default (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SUCCESS:
       return { error: {}, isLoading: false, hasError: false };
@@ -23,3 +23,5 @@ export default (state = initialState, action) => {
       return state;
   }
 };
+
+export default reducer;

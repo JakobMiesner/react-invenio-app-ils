@@ -80,7 +80,7 @@ export default class RelationEditionModal extends Component {
             <Form>
               <Container className="spaced">
                 <Form.Group inline>
-                  <label>Search in</label>
+                  <span>Search in</span>
                   <Form.Radio
                     label="Documents"
                     value="document"

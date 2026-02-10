@@ -7,6 +7,7 @@ import {
   SUCCESS,
   HAS_ERROR,
 } from './actions';
+
 describe('Fetch eitem details reducer', () => {
   it('should have initial state', () => {
     expect(reducer(undefined, {})).toEqual(initialState);

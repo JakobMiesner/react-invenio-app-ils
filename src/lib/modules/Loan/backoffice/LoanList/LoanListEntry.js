@@ -37,7 +37,7 @@ export class LoanListEntry extends Component {
           </Item.Header>
           <Grid columns={5}>
             <Grid.Column computer={6} largeScreen={5}>
-              <label>Patron</label>{' '}
+              <span>Patron</span>{' '}
               {patronPid > 0 ? (
                 <Link
                   target="_blank"
@@ -63,7 +63,7 @@ export class LoanListEntry extends Component {
                     {loan.metadata.state}
                   </List.Content>
                   <List.Content>
-                    <label>State</label>
+                    <span>State</span>
                   </List.Content>
                 </List.Item>
                 <List.Item>
@@ -74,7 +74,7 @@ export class LoanListEntry extends Component {
                     {loan.metadata.extension_count || '0'}
                   </List.Content>
                   <List.Content>
-                    <label> Extensions</label>
+                    <span> Extensions</span>
                   </List.Content>
                 </List.Item>
               </List>
@@ -119,7 +119,7 @@ export class LoanListEntry extends Component {
                     </List.Content>
                     {loan.metadata.item.medium && (
                       <List.Content>
-                        <label>medium</label> {loan.metadata.item.medium}
+                        <span>medium</span> {loan.metadata.item.medium}
                       </List.Content>
                     )}
                   </List.Item>

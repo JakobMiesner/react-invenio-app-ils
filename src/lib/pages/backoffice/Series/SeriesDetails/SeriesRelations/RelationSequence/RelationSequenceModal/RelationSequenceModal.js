@@ -41,7 +41,7 @@ export default class RelationOtherModal extends Component {
   selectResultRender = (option, disabled) => {
     const description = (
       <>
-        <label>languages:</label>{' '}
+        <span>languages:</span>{' '}
         <SeriesLanguages languages={option.metadata.languages} />
       </>
     );
@@ -129,7 +129,7 @@ export default class RelationOtherModal extends Component {
               </Form.Group>
               <br /> <br />
               <Form.Group inline>
-                <label>Choose the sequence direction. This series:</label>
+                <span>Choose the sequence direction. This series:</span>
                 <Form.Radio
                   label={this.ORDER_IS_CONTINUED_BY.label}
                   value={this.ORDER_IS_CONTINUED_BY.order}

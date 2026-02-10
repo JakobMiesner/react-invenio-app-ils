@@ -14,7 +14,7 @@ const DocumentLanguages = ({ languages, separator, withLabel, listItemAs }) => {
       {...{ languages, separator, withLabel, listItemAs }}
     >
       <>
-        {withLabel && <label>languages </label>}
+        {withLabel && <span>languages </span>}
         <List horizontal className="document-languages-list">
           {languages.map((language, index) => {
             const separatorCmp =

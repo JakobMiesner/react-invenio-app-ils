@@ -97,7 +97,7 @@ export default class ESSelectorLoanRequest extends Component {
     const disabled = _isEmpty(selections);
     return (
       <Form.Field>
-        <label>Optionally, select a limit date for your request</label>
+        <span>Optionally, select a limit date for your request</span>
         <LocationDatePicker
           locationPid={locationPid}
           disabledInput={disabled}
@@ -113,7 +113,7 @@ export default class ESSelectorLoanRequest extends Component {
   renderDeliveryMethodSelector = () => {
     return this.withDeliveryMethod ? (
       <Form.Field>
-        <label>Choose the book delivery method</label>
+        <span>Choose the book delivery method</span>
         <Form.Dropdown
           placeholder="Select delivery method"
           options={this.deliveryMethods}

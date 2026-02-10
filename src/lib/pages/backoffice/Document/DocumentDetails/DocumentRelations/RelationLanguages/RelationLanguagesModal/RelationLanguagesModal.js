@@ -27,7 +27,7 @@ export default class RelationLanguagesModal extends Component {
   selectResultRender = (option, disabled) => {
     const description = (
       <>
-        <label>languages:</label>{' '}
+        <span>languages:</span>{' '}
         <DocumentLanguages languages={option.metadata.languages} />
       </>
     );

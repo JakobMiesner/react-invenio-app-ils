@@ -189,7 +189,14 @@ class DocumentAuthors extends Component {
           {' '}
           <span
             className="button-show-more"
+            role="button"
+            tabIndex={0}
             onClick={this.toggleShowAllAuthors}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                this.toggleShowAllAuthors();
+              }
+            }}
           >
             {isExpanded ? 'Show less' : `Show all ${allAuthors.length} authors`}
           </span>

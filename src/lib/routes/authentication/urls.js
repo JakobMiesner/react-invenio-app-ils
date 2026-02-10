@@ -1,4 +1,5 @@
 import { generatePath } from 'react-router-dom';
+
 const AuthenticationBase = '/';
 
 const AuthenticationRoutesList = {

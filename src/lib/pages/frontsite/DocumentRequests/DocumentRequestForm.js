@@ -343,6 +343,7 @@ DocumentRequestForm.defaultProps = {
     label: 'Publisher',
     placeholder: 'Publisher',
   },
+  location: null,
 };
 
 export default Overridable.component(

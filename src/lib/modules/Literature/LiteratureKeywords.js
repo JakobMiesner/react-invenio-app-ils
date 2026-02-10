@@ -8,8 +8,8 @@ const LiteratureKeywords = ({ keywords, separator, noneMessage }) => {
     return keywordValue && keywordSource
       ? `${keywordValue} (${keywordSource})`
       : keywordValue
-        ? keywordValue
-        : '';
+      ? keywordValue
+      : '';
   }
 
   return (
@@ -17,13 +17,11 @@ const LiteratureKeywords = ({ keywords, separator, noneMessage }) => {
       id="LiteratureKeywords.layout"
       {...{ keywords, separator, noneMessage }}
     >
-      <>
-        {_get(keywords, 'length', 0) > 0
-          ? keywords
-              .map((keyword) => displayKeyword(keyword.value, keyword.source))
-              .join(separator)
-          : noneMessage}
-      </>
+      {_get(keywords, 'length', 0) > 0
+        ? keywords
+            .map((keyword) => displayKeyword(keyword.value, keyword.source))
+            .join(separator)
+        : noneMessage}
     </Overridable>
   );
 };

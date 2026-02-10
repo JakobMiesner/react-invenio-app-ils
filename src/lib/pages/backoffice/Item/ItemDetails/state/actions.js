@@ -9,6 +9,7 @@ import { goTo } from '@history';
 import { BackOfficeRoutes } from '@routes/urls';
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 export const IS_LOADING = 'fetchItemDetails/IS_LOADING';
 export const SUCCESS = 'fetchItemDetails/SUCCESS';
 export const HAS_ERROR = 'fetchItemDetails/HAS_ERROR';

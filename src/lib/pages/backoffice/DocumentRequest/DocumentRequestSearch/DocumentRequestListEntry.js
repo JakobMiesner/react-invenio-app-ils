@@ -26,7 +26,7 @@ export class DocumentRequestListEntry extends Component {
           </Item.Header>
           <Grid columns={3}>
             <Grid.Column computer={7} largeScreen={7}>
-              <label>Patron</label>{' '}
+              <span>Patron</span>{' '}
               {patronPid > 0 ? (
                 <Link to={BackOfficeRoutes.patronDetailsFor(patronPid)}>
                   {patronName}
@@ -39,16 +39,16 @@ export class DocumentRequestListEntry extends Component {
                 <Header className="list-entry-title" as="h5">
                   {documentRequest.metadata.title}
                 </Header>
-                by <label>{documentRequest.metadata.authors}</label>
+                by <span>{documentRequest.metadata.authors}</span>
               </Item.Meta>
               {documentRequest.metadata.issn && (
                 <>
-                  <label>ISSN</label> {documentRequest.metadata.issn}
+                  <span>ISSN</span> {documentRequest.metadata.issn}
                 </>
               )}
               {documentRequest.metadata.isbn && (
                 <>
-                  <label>ISBN</label> {documentRequest.metadata.isbn}
+                  <span>ISBN</span> {documentRequest.metadata.isbn}
                 </>
               )}
             </Grid.Column>
@@ -56,13 +56,13 @@ export class DocumentRequestListEntry extends Component {
               <List>
                 <List.Item>
                   <List.Content>
-                    <label>State</label> {documentRequest.metadata.state}
+                    <span>State</span> {documentRequest.metadata.state}
                   </List.Content>
                 </List.Item>
                 {documentRequest.metadata.decline_reason && (
                   <List.Item>
                     <List.Content>
-                      <label>Decline reason </label>
+                      <span>Decline reason </span>
                       {documentRequest.metadata.decline_reason}
                     </List.Content>
                   </List.Item>
@@ -70,7 +70,7 @@ export class DocumentRequestListEntry extends Component {
                 {documentRequest.metadata.document_pid && (
                   <List.Item>
                     <List.Content>
-                      <label>Selected document</label>
+                      <span>Selected document</span>
                       <Link
                         to={BackOfficeRoutes.documentDetailsFor(
                           documentRequest.metadata.document_pid
@@ -92,14 +92,14 @@ export class DocumentRequestListEntry extends Component {
             <Grid.Column computer={4} largeScreen={4}>
               {documentRequest.metadata.publication_year && (
                 <>
-                  <label>published</label>{' '}
+                  <span>published</span>{' '}
                   {documentRequest.metadata.publication_year}
                 </>
               )}
               <br />
               {documentRequest.metadata.volume && (
                 <>
-                  <label>volume</label> {documentRequest.metadata.volume}
+                  <span>volume</span> {documentRequest.metadata.volume}
                 </>
               )}
             </Grid.Column>

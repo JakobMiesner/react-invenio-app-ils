@@ -88,7 +88,7 @@ class LocationHeader extends React.Component {
         icon={<LocationIcon />}
         recordType="Location"
       >
-        <label>Location</label> #{data.metadata.pid}
+        <span>Location</span> #{data.metadata.pid}
         <CopyButton text={data.metadata.pid} />
       </DetailsHeader>
     );

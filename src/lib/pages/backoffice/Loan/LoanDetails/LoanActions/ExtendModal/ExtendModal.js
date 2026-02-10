@@ -53,60 +53,56 @@ export default class ExtendModal extends Component {
   render() {
     const { pid, isLoading } = this.props;
     const { open, overbooked } = this.state;
-    return (
-      <>
-        {overbooked ? (
-          <Modal
-            size="small"
-            trigger={
-              <Button
-                primary
-                fluid
-                content="Extend"
-                onClick={this.show}
-                loading={isLoading}
-                disabled={isLoading}
-              />
-            }
-            open={open}
-            onClose={this.hide}
-          >
-            <Header content={`Extend Loan #${pid}`} />
-            <Modal.Content>
-              <Grid>
-                <Grid.Column width={1}>
-                  <Icon name="warning sign" color="red" size="large" />
-                </Grid.Column>
-                <Grid.Column width={15}>
-                  <p>
-                    {`Are you sure you want to extend the loan #${pid}?
-            This literature is overbooked.`}
-                  </p>
-                </Grid.Column>
-              </Grid>
-            </Modal.Content>
-            <Modal.Actions>
-              <Button secondary onClick={this.hide}>
-                Cancel
-              </Button>
-              <Button primary onClick={this.extend}>
-                Extend
-              </Button>
-            </Modal.Actions>
-          </Modal>
-        ) : (
+    return overbooked ? (
+      <Modal
+        size="small"
+        trigger={
           <Button
-            size="small"
-            fluid
             primary
-            onClick={this.extend}
+            fluid
+            content="Extend"
+            onClick={this.show}
             loading={isLoading}
             disabled={isLoading}
-          >
+          />
+        }
+        open={open}
+        onClose={this.hide}
+      >
+        <Header content={`Extend Loan #${pid}`} />
+        <Modal.Content>
+          <Grid>
+            <Grid.Column width={1}>
+              <Icon name="warning sign" color="red" size="large" />
+            </Grid.Column>
+            <Grid.Column width={15}>
+              <p>
+                {`Are you sure you want to extend the loan #${pid}?
+            This literature is overbooked.`}
+              </p>
+            </Grid.Column>
+          </Grid>
+        </Modal.Content>
+        <Modal.Actions>
+          <Button secondary onClick={this.hide}>
+            Cancel
+          </Button>
+          <Button primary onClick={this.extend}>
             Extend
           </Button>
-        )}
-      </>
+        </Modal.Actions>
+      </Modal>
+    ) : (
+      <Button
+        size="small"
+        fluid
+        primary
+        onClick={this.extend}
+        loading={isLoading}
+        disabled={isLoading}
+      >
+        Extend
+      </Button>
     );
   }
 }

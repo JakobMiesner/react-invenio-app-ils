@@ -114,6 +114,7 @@ export class RJSFVocabulary extends Component {
         value={valueIsValid ? value : undefined}
         clearable
         required={required}
+        // eslint-disable-next-line jsx-a11y/no-autofocus
         autoFocus={autofocus}
         placeholder={placeholder}
         onChange={this.handleChange}

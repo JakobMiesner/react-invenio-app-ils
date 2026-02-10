@@ -6,6 +6,7 @@ import {
 } from '@components/Notifications';
 import { goTo } from '@history';
 import { ProviderRoutes } from '@routes/urls';
+
 export const IS_LOADING = 'fetchProviderDetails/IS_LOADING';
 export const SUCCESS = 'fetchProviderDetails/SUCCESS';
 export const HAS_ERROR = 'fetchProviderDetails/HAS_ERROR';

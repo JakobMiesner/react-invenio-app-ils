@@ -45,7 +45,7 @@ export class DocumentRequestHeader extends Component {
             {patron.name}
           </Link>
         ) : (
-          <>{patron.name}</>
+          patron.name
         )}
       </>
     );

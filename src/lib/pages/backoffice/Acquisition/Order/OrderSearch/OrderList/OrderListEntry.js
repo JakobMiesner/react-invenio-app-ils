@@ -30,11 +30,11 @@ export default class OrderListEntry extends Component {
           </Item.Description>
         )}
         <Item.Description>
-          <label>status </label>
+          <span>status </span>
           {getDisplayVal('ACQ_ORDERS.statuses', order.metadata.status)}
         </Item.Description>
         <Item.Description>
-          <label>provider </label>
+          <span>provider </span>
           <Link
             to={ProviderRoutes.providerDetailsFor(order.metadata.provider_pid)}
           >
@@ -42,7 +42,7 @@ export default class OrderListEntry extends Component {
           </Link>
         </Item.Description>
         <Item.Description>
-          <label>total </label>
+          <span>total </span>
           {totalMainCurrency}
           {total}
         </Item.Description>

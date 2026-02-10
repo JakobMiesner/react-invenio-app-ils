@@ -44,6 +44,10 @@ Wrapper.propTypes = {
   children: PropTypes.array,
 };
 
+Wrapper.defaultProps = {
+  children: null,
+};
+
 /**
  * Component to allow wrapping the original RJSF FieldTemplate
  * @param {*} props
@@ -137,6 +141,7 @@ function GridRow(props) {
         const colWidth = row[fieldName];
         const isDivider = fieldName === 'custom:divider';
         if (isDivider) {
+          // eslint-disable-next-line react/no-array-index-key
           return <GridDivider colWidth={colWidth} key={i} />;
         } else {
           const field = _find(
@@ -186,6 +191,7 @@ function ObjectFieldTemplateGrid(props) {
             <GridRow
               formProps={props}
               row={row}
+              // eslint-disable-next-line react/no-array-index-key
               key={`${firstFieldName}${i}`}
             />
           );

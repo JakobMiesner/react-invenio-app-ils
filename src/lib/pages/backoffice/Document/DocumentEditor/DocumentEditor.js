@@ -37,7 +37,8 @@ export class DocumentEditor extends Component {
   }
 
   get userIsEditing() {
-    return !!this.props.match.params.documentPid;
+    const { match } = this.props;
+    return !!match.params.documentPid;
   }
 
   fetch = async (documentPid) => {

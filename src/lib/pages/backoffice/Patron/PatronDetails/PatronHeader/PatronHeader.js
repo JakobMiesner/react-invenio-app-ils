@@ -12,7 +12,7 @@ export default class PatronHeader extends Component {
     const { data } = this.props;
     const recordInfo = (
       <>
-        <label className="muted">Patron</label> {data.metadata.pid}{' '}
+        <span className="muted">Patron</span> {data.metadata.pid}{' '}
         <CopyButton text={data.metadata.id} />
         <br />
       </>

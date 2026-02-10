@@ -38,7 +38,7 @@ export class DocumentPublishing extends Component {
     } = this.props;
     let rows = [];
     // eslint-disable-next-line camelcase
-    conference_info.map((conf) => {
+    conference_info.forEach((conf) => {
       for (const [key, val] of Object.entries(conf)) {
         if (Array.isArray(val)) {
           const arrayVals = (

@@ -4,6 +4,7 @@ import {
   sendErrorNotification,
   sendSuccessNotification,
 } from '@components/Notifications';
+
 export const IS_LOADING = 'fetchAllLocations/IS_LOADING';
 export const SUCCESS = 'fetchAllLocations/SUCCESS';
 export const HAS_ERROR = 'fetchAllLocations/HAS_ERROR';

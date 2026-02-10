@@ -134,7 +134,7 @@ class ProviderHeader extends React.Component {
         icon={<ProviderIcon />}
         recordInfo={
           <>
-            <label>Provider</label> #{data.metadata.pid}
+            <span>Provider</span> #{data.metadata.pid}
             <CopyButton text={data.metadata.pid} />
           </>
         }

@@ -30,10 +30,10 @@ export default class LoanHeader extends Component {
 
     const recordInfo = (
       <>
-        <label className="muted">Loan</label> {data.metadata.pid}{' '}
+        <span className="muted">Loan</span> {data.metadata.pid}{' '}
         <CopyButton text={data.metadata.pid} />
         <br />
-        <label className="muted">Created on</label>{' '}
+        <span className="muted">Created on</span>{' '}
         {toShortDate(DateTime.fromISO(data.created))}
       </>
     );

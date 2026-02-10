@@ -47,10 +47,10 @@ export class ItemHeader extends Component {
     const { data } = this.props;
     const recordInfo = (
       <>
-        <label className="muted">Physical copy</label> {data.metadata.pid}{' '}
+        <span className="muted">Physical copy</span> {data.metadata.pid}{' '}
         <CopyButton text={data.metadata.pid} />
         <br />
-        <label className="muted">Created on</label>{' '}
+        <span className="muted">Created on</span>{' '}
         {toShortDate(DateTime.fromISO(data.created))}
         <br />
         <Link

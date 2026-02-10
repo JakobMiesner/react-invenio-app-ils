@@ -158,6 +158,7 @@ export class RJSFESSelector extends Component {
         value={value}
         multiple={selectMultiple || false}
         required={required}
+        // eslint-disable-next-line jsx-a11y/no-autofocus
         autoFocus={autofocus}
         disabled={disabled || readonly}
         placeholder={placeholder}

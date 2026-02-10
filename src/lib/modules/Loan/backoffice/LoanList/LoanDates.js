@@ -19,21 +19,21 @@ export class LoanDates extends Component {
             toShortDate(DateTime.fromISO(loan.metadata.request_start_date))}
         </List.Content>
         <List.Content>
-          <label> Requested on </label>
+          <span> Requested on </span>
         </List.Content>
         <List.Content floated="right">
           {loan.metadata.request_expire_date &&
             toShortDate(DateTime.fromISO(loan.metadata.request_expire_date))}
         </List.Content>
         <List.Content>
-          <label> Expires on </label>
+          <span> Expires on </span>
         </List.Content>
       </>
     ) : (
       <>
         <List.Content floated="right">{loan.metadata.start_date}</List.Content>
         <List.Content>
-          <label> Start date </label>
+          <span> Start date </span>
         </List.Content>
         <List.Content floated="right">
           {loan.metadata.is_overdue && <Icon name="warning" />}
@@ -41,7 +41,7 @@ export class LoanDates extends Component {
             toShortDate(DateTime.fromISO(loan.metadata.end_date))}
         </List.Content>
         <List.Content>
-          <label> End date </label>
+          <span> End date </span>
         </List.Content>
       </>
     );

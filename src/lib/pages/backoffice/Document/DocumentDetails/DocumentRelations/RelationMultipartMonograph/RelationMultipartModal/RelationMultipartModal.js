@@ -68,7 +68,7 @@ export default class RelationMultipartModal extends Component {
               <br />
               <br />
               <Form.Field inline key="volume">
-                <label>Volume index</label>
+                <span>Volume index</span>
                 <Input
                   name="volume"
                   onChange={(e, { value }) => this.setState({ volume: value })}
@@ -87,8 +87,7 @@ export default class RelationMultipartModal extends Component {
                   <br />
                   is{' '}
                   <Label color="blue">
-                    volume{' '}
-                    {volume && <Label.Detail>{volume}</Label.Detail>}{' '}
+                    volume {volume && <Label.Detail>{volume}</Label.Detail>}{' '}
                   </Label>{' '}
                   of
                 </>

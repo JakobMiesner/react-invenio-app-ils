@@ -130,7 +130,7 @@ export default class DocumentListEntry extends Component {
               </Item.Meta>
               <DocumentLanguages
                 languages={document.metadata.languages}
-                prefix={<label>languages </label>}
+                prefix={<span>languages </span>}
               />
               <Item.Description>
                 {document.metadata.edition && (
@@ -141,13 +141,13 @@ export default class DocumentListEntry extends Component {
                 )}
               </Item.Description>
               <Item.Description>
-                <label>Publication year</label>{' '}
+                <span>Publication year</span>{' '}
                 {document.metadata.publication_year}
               </Item.Description>
               <Item.Description>
                 {document.metadata.imprint?.publisher && (
                   <>
-                    <label> Publisher </label>
+                    <span> Publisher </span>
                     {document.metadata.imprint.publisher}
                   </>
                 )}

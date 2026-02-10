@@ -139,5 +139,6 @@ DocumentPurchaseOrders.propTypes = {
 };
 
 DocumentPurchaseOrders.defaultProps = {
+  documentDetails: null,
   showMaxPurchaseOrders: 5,
 };

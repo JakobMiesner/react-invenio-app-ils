@@ -53,4 +53,12 @@ Pagination.propTypes = {
   lastItem: PropTypes.any,
 };
 
+Pagination.defaultProps = {
+  currentSize: invenioConfig.APP.DEFAULT_RESULTS_SIZE,
+  totalPages: null,
+  loading: false,
+  firstItem: null,
+  lastItem: null,
+};
+
 export default Overridable.component('Pagination', Pagination);

@@ -14,24 +14,24 @@ const OrderLineLeftColumn = ({ line }) => {
     <>
       {line.patron && (
         <Item.Description>
-          <label>Patron: </label>
+          <span>Patron: </span>
           {line.patron_pid > 0 ? (
             <Link to={BackOfficeRoutes.patronDetailsFor(line.patron_pid)}>
               <PatronIcon /> {line.patron.name}
             </Link>
           ) : (
-            <>{line.patron.name}</>
+            line.patron.name
           )}
         </Item.Description>
       )}
       <Item.Description>
-        <label>Medium: </label> {line.medium}
+        <span>Medium: </span> {line.medium}
       </Item.Description>
       <Item.Description>
-        <label>Recipient: </label> {line.recipient}
+        <span>Recipient: </span> {line.recipient}
       </Item.Description>
       <Item.Description>
-        <label>Purchase type: </label>
+        <span>Purchase type: </span>
         {line.purchase_type}
       </Item.Description>
     </>
@@ -46,19 +46,19 @@ const OrderLineMiddleColumn = ({ line }) => {
   return (
     <>
       <Item.Description>
-        <label>Copies ordered: </label>
+        <span>Copies ordered: </span>
         {line.copies_ordered}
       </Item.Description>
       <Item.Description>
-        <label>Copies received: </label>
+        <span>Copies received: </span>
         {line.copies_received || '-'}
       </Item.Description>
       <Item.Description>
-        <label>Payment mode: </label>
+        <span>Payment mode: </span>
         {line.payment_mode || '-'}
       </Item.Description>
       <Item.Description>
-        <label>IDT ID: </label>
+        <span>IDT ID: </span>
         {line.inter_departmental_transaction_id || '-'}{' '}
         <Popup
           content="Inter departmental transaction ID"
@@ -77,19 +77,19 @@ const OrderLineRightColumn = ({ line }) => {
   return (
     <>
       <Item.Description>
-        <label>Payment information: </label>
+        <span>Payment information: </span>
         {line.budget_code || '-'}
       </Item.Description>
       <Item.Description>
-        <label>Total price: </label>
+        <span>Total price: </span>
         {formatPrice(line.total_price) || '-'}
       </Item.Description>
       <Item.Description>
-        <label>Unit price: </label>
+        <span>Unit price: </span>
         {formatPrice(line.unit_price) || '-'}
       </Item.Description>
       <Item.Description>
-        <label>Notes: </label>
+        <span>Notes: </span>
         {line.notes || '-'}
       </Item.Description>
     </>

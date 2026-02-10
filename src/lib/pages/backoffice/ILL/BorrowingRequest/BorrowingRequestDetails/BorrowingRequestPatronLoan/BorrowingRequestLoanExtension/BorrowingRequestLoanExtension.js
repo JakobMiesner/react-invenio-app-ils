@@ -111,7 +111,7 @@ export default class BorrowingRequestLoanExtension extends Component {
                         <Form>
                           <Form.Group>
                             <Form.Field inline required>
-                              <label>Extension end date</label>
+                              <span>Extension end date</span>
                               <LocationDatePicker
                                 locationPid={patron.location_pid}
                                 defaultValue={this.endDate}

@@ -5,8 +5,6 @@ import { screenIsWiderThan } from '@components/utils';
 import { Breakpoints } from '@components/Media';
 
 export class SearchBarILS extends Component {
-  inputRef = createRef();
-
   state = { currentValue: '' };
 
   componentDidMount() {
@@ -16,6 +14,8 @@ export class SearchBarILS extends Component {
       this.inputRef.current.focus();
     }
   }
+
+  inputRef = createRef();
 
   clearQueryString = () => {
     this.setState({ currentValue: '' });

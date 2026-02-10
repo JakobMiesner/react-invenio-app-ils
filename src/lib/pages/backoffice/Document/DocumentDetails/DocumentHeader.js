@@ -21,17 +21,17 @@ export class DocumentHeader extends Component {
     const { data } = this.props;
     const recordInfo = (
       <>
-        <label className="muted">Document</label> {data.metadata.pid}{' '}
+        <span className="muted">Document</span> {data.metadata.pid}{' '}
         <CopyButton text={data.metadata.pid} />
         {data.metadata.created_by && (
           <>
             <br />
-            <label className="muted">Created by</label>{' '}
+            <span className="muted">Created by</span>{' '}
             <CreatedBy metadata={data.metadata} />
           </>
         )}
         <br />
-        <label className="muted">Created on</label>{' '}
+        <span className="muted">Created on</span>{' '}
         {toShortDate(DateTime.fromISO(data.created))}
         <br />
         <RestrictedAccessLabel isRestricted={data.metadata.restricted} />

@@ -92,3 +92,7 @@ export class OrderDocumentRequest extends React.Component {
 OrderDocumentRequest.propTypes = {
   orderId: PropTypes.object,
 };
+
+OrderDocumentRequest.defaultProps = {
+  orderId: null,
+};
