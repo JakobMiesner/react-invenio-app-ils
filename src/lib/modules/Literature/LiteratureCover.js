@@ -17,7 +17,7 @@ class LiteratureCover extends Component {
   };
 
   render() {
-    const { asItem, isRestricted, linkTo, size, url, isLoading, ...uiProps } =
+    const { asItem, isRestricted, linkTo, size, url, isLoading, alt, ...uiProps } =
       this.props;
     const Cmp = asItem ? Item.Image : Image;
     const link = linkTo ? { as: Link, to: linkTo } : {};
@@ -33,6 +33,7 @@ class LiteratureCover extends Component {
             src={url}
             size={size}
             className="image-cover"
+            alt={alt}
             {...uiProps}
           />
         )}
@@ -48,6 +49,7 @@ LiteratureCover.propTypes = {
   size: PropTypes.string,
   url: PropTypes.string,
   isLoading: PropTypes.bool,
+  alt: PropTypes.string,
 };
 
 LiteratureCover.defaultProps = {
@@ -57,6 +59,7 @@ LiteratureCover.defaultProps = {
   size: 'large',
   url: null,
   isLoading: false,
+  alt: '',
 };
 
 export default Overridable.component('LiteratureCover', LiteratureCover);
