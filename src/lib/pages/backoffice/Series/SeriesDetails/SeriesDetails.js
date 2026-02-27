@@ -61,7 +61,7 @@ export default class SeriesDetails extends Component {
         <Icon name="dropdown" />
         Documents in this series{docsInSeries}
         <Popup
-          trigger={<Icon name="help circle" style={{ float: 'right' }} />}
+          trigger={<Icon name="help circle" style={{ float: 'right' }} aria-label="Help" />}
           content="You can add/remove documents to this series by using the series panel in the document details"
           position="top right"
         />
@@ -86,7 +86,7 @@ export default class SeriesDetails extends Component {
         <Icon name="dropdown" />
         Multipart monographs in this series{multiMonoInSeries}
         <Popup
-          trigger={<Icon name="help circle" style={{ float: 'right' }} />}
+          trigger={<Icon name="help circle" style={{ float: 'right' }} aria-label="Help" />}
           content="You can add/remove multipart monograph to this series by using the series panel in the document details"
           position="top right"
         />

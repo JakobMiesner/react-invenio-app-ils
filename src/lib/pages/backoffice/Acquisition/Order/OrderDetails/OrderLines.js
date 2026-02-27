@@ -62,7 +62,7 @@ const OrderLineMiddleColumn = ({ line }) => {
         {line.inter_departmental_transaction_id || '-'}{' '}
         <Popup
           content="Inter departmental transaction ID"
-          trigger={<Icon name="info circle" />}
+          trigger={<Icon name="info circle" aria-label="Inter departmental transaction ID info" />}
         />
       </Item.Description>
     </>

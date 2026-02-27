@@ -131,7 +131,7 @@ class PopUpShowMoreFields extends Component {
           content={this.renderPopupContent(author)}
           position="top center"
           flowing
-          trigger={<Icon name="info circle" />}
+          trigger={<Icon name="info circle" aria-label="Author details" />}
         />
       </>
     );

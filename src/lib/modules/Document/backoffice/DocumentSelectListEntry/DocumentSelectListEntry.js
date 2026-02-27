@@ -17,7 +17,7 @@ export default class DocumentSelectListEntry extends Component {
           {disabled && (
             <Popup
               content="This document was already selected."
-              trigger={<Icon name="info circle" />}
+              trigger={<Icon name="info circle" aria-label="Document already selected" />}
             />
           )}
           <LiteratureTitle

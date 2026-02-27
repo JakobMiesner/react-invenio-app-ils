@@ -56,7 +56,7 @@ export default class DocumentStats extends Component {
                     content={`This average is computed with the number of past
                     loans on the selected range of dates, and the current number
                     of items (${itemsCount}) of the document.`}
-                    trigger={<Icon name="info circle" size="small" />}
+                    trigger={<Icon name="info circle" size="small" aria-label="Average calculation info" />}
                   />
                 </Table.HeaderCell>
               </Table.Row>

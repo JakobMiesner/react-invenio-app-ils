@@ -54,7 +54,7 @@ export default class LoansListEntry extends Component {
     const illWarningCmp = isIllBrwReq ? (
       <Popup
         content="This loan involves third party library, please return on time."
-        trigger={<Icon name="exclamation circle" size="large" color="red" />}
+        trigger={<Icon name="exclamation circle" size="large" color="red" aria-label="Warning: third party library loan" />}
       />
     ) : null;
     return (
