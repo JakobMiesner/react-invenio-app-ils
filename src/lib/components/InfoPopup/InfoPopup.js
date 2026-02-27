@@ -10,7 +10,7 @@ export const InfoPopup = ({ children, message }) => {
       trigger={
         <span className="info-popup">
           {children}
-          <Icon color="grey" name="question circle outline" />
+          <Icon color="grey" name="question circle outline" aria-label="More information" />
         </span>
       }
     />
