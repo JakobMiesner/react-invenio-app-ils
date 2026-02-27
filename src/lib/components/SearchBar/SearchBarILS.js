@@ -56,6 +56,7 @@ export class SearchBarILS extends Component {
       <Input
         action={{
           icon: 'search',
+          'aria-label': 'Search',
           onClick: () => onSearchHandler(currentValue),
         }}
         onChange={(event, { value }) => {
