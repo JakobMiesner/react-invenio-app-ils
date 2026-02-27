@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Header, Icon, Label, Message, Popup } from 'semantic-ui-react';
+import { Icon, Label, Message, Popup } from 'semantic-ui-react';
 import LoansListItem from '../LoansListEntry';
 import { BrwReqLoanExtendButton } from './BrwReqLoanExtendButton';
 import { LoanExtendButton } from './LoanExtendButton';
@@ -38,16 +38,16 @@ export default class LoansListEntry extends Component {
   };
 
   getOverdueLabel = () => (
-    <h4>
-      Your loan is overdue. Please return the literature as soon as possible!
-    </h4>
+    <p className="loan-message">
+      <strong>Your loan is overdue.</strong> Please return the literature as soon as possible!
+    </p>
   );
 
   getReturnLabel = (endDate) => (
-    <h4>
-      Please return the literature before date
-      <Header size="large">{DateTime.fromISO(endDate).toLocaleString()}</Header>
-    </h4>
+    <p className="loan-message">
+      Please return the literature before date{' '}
+      <strong>{DateTime.fromISO(endDate).toLocaleString()}</strong>
+    </p>
   );
 
   getOngoingLabel = (startDate, isIllBrwReq) => {
