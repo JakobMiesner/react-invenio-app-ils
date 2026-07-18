@@ -69,6 +69,7 @@ export class SearchBarILS extends Component {
         fluid
         size="big"
         placeholder={placeholder}
+        aria-label={placeholder || 'Search'}
         className={`${parentClass} ils-searchbar`}
         ref={this.inputRef}
         {...rest}

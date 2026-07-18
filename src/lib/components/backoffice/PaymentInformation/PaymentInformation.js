@@ -4,7 +4,8 @@ import { InfoMessage } from '@components/InfoMessage';
 import { invenioConfig } from '@config';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Grid, Icon, Popup } from 'semantic-ui-react';
+import { Grid } from 'semantic-ui-react';
+import { PopupIcon } from '@components/InfoPopup';
 import { max } from 'lodash';
 
 export function leftPaymentTable(order, type = 'acquisition-order') {
@@ -30,9 +31,9 @@ export function leftPaymentTable(order, type = 'acquisition-order') {
       name: (
         <>
           IPR ID{' '}
-          <Popup
+          <PopupIcon
             content="Internal purchase requisition ID"
-            trigger={<Icon name="info circle" size="large" />}
+            iconProps={{ size: 'large' }}
           />
         </>
       ),

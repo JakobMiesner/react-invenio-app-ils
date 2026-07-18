@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Button, Icon, Modal, Popup } from 'semantic-ui-react';
+import { Button, Icon, Modal } from 'semantic-ui-react';
+import { PopupIcon } from '@components/InfoPopup';
 import _get from 'lodash/get';
 import _isEmpty from 'lodash/isEmpty';
 
@@ -83,9 +84,10 @@ export default class RelationModal extends Component {
               {triggerButtonContent}
             </Button>
             {disabled && disabledContent && (
-              <Popup
+              <PopupIcon
                 content={disabledContent}
-                trigger={<Icon size="large" name="info circle" color="grey" />}
+                ariaLabel="Why is this disabled?"
+                iconProps={{ size: 'large', color: 'grey' }}
               />
             )}
           </div>

@@ -44,7 +44,12 @@
 @boSidebarBackgroundColor  : #eee;
 @fsBorderColor             : #c6c4d0;
 @metadataFieldsColor       : rgba(0,0,0,0.6);
-@mutedTextColor            : #aaa;
+/* WCAG AA (4.5:1) on white and on @highlightBackgroundColor. Was #aaa = 2.3:1. */
+@mutedTextColor            : #595959;
+
+/* Semantic's default rgba(0,0,0,0.4) is 2.8:1 - fails AA. Drives .card .meta,
+   .item .meta, subheaders. */
+@lightTextColor            : rgba(0,0,0,0.6);
 
 @danger                    : @red;
 @success                   : @green;

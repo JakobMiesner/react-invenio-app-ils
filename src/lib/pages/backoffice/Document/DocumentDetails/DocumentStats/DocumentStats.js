@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
-import {
-  Form,
-  Grid,
-  Header,
-  Icon,
-  Popup,
-  Segment,
-  Table,
-} from 'semantic-ui-react';
+import { Form, Grid, Header, Segment, Table } from 'semantic-ui-react';
+import { PopupIcon } from '@components/InfoPopup';
 import { DatePicker } from '@components/DatePicker';
 import { Error } from '@components/Error';
 import { Loader } from '@components/Loader';
@@ -51,12 +44,12 @@ export default class DocumentStats extends Component {
                 <Table.HeaderCell>renewals</Table.HeaderCell>
                 <Table.HeaderCell>
                   average{' '}
-                  <Popup
+                  <PopupIcon
                     position="top right"
                     content={`This average is computed with the number of past
                     loans on the selected range of dates, and the current number
                     of items (${itemsCount}) of the document.`}
-                    trigger={<Icon name="info circle" size="small" aria-label="Average calculation info" />}
+                    iconProps={{ size: 'small' }}
                   />
                 </Table.HeaderCell>
               </Table.Row>

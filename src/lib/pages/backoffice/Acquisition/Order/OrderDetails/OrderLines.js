@@ -5,7 +5,8 @@ import { BackOfficeRoutes } from '@routes/urls';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Divider, Grid, Icon, Item, Message, Popup } from 'semantic-ui-react';
+import { Divider, Grid, Item, Message } from 'semantic-ui-react';
+import { PopupIcon } from '@components/InfoPopup';
 import Overridable from 'react-overridable';
 import { renderSubtitle } from '@modules/Document/utils';
 
@@ -60,10 +61,7 @@ const OrderLineMiddleColumn = ({ line }) => {
       <Item.Description>
         <label>IDT ID: </label>
         {line.inter_departmental_transaction_id || '-'}{' '}
-        <Popup
-          content="Inter departmental transaction ID"
-          trigger={<Icon name="info circle" aria-label="Inter departmental transaction ID info" />}
-        />
+        <PopupIcon content="Inter departmental transaction ID" />
       </Item.Description>
     </>
   );

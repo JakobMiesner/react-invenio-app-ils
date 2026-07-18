@@ -20,7 +20,7 @@ export class SectionInstallation extends Component {
           <Container fluid className="dot-background">
             <Container className="fs-landing-page-section">
               <Header
-                as="h1"
+                as="h2"
                 className="section-header highlight"
                 textAlign="center"
               >
