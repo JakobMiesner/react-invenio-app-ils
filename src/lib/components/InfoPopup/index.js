@@ -3,4 +3,4 @@
  * SPDX-License-Identifier: MIT
  */
 
-export { InfoPopup } from './InfoPopup.js';
+export { InfoPopup, PopupIcon } from './InfoPopup.js';
