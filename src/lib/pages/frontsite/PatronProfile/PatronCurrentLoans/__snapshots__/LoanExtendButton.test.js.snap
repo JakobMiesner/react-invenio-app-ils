@@ -35,85 +35,114 @@ exports[`Extend loan button tests should match snapshot 1`] = `
   onError={[Function]}
   onSuccess={[Function]}
 >
-  <Popup
+  <PopupIcon
+    ariaLabel={null}
     content="It is too early for extending the loan. You can request an extension from
     January 25."
-    disabled={false}
-    eventsEnabled={true}
-    on={
-      Array [
-        "click",
-        "hover",
-      ]
-    }
-    pinned={false}
-    popperModifiers={Array []}
+    icon="info"
+    iconProps={Object {}}
     position="top right"
-    trigger={
-      <Icon
-        as="i"
-        name="info"
-      />
-    }
   >
-    <Portal
-      closeOnDocumentClick={true}
-      closeOnEscape={true}
-      closeOnTriggerClick={true}
-      closeOnTriggerMouseLeave={true}
-      eventPool="default"
-      mouseEnterDelay={50}
-      mouseLeaveDelay={70}
-      onClose={[Function]}
-      onMount={[Function]}
-      onOpen={[Function]}
-      onUnmount={[Function]}
-      openOnTriggerClick={true}
-      openOnTriggerMouseEnter={true}
+    <Popup
+      content="It is too early for extending the loan. You can request an extension from
+    January 25."
+      disabled={false}
+      eventsEnabled={true}
+      on={
+        Array [
+          "hover",
+          "focus",
+        ]
+      }
+      pinned={false}
+      popperModifiers={Array []}
+      position="top right"
       trigger={
         <Icon
+          aria-label="It is too early for extending the loan. You can request an extension from
+    January 25."
           as="i"
           name="info"
+          role="button"
+          tabIndex={0}
         />
       }
-      triggerRef={
-        Object {
-          "current": <i
-            aria-hidden="true"
-            class="info icon"
-          />,
-        }
-      }
     >
-      <Ref
-        innerRef={[Function]}
-      >
-        <RefFindNode
-          innerRef={[Function]}
-        >
+      <Portal
+        closeOnDocumentClick={true}
+        closeOnEscape={true}
+        closeOnTriggerBlur={true}
+        closeOnTriggerClick={false}
+        closeOnTriggerMouseLeave={true}
+        eventPool="default"
+        mouseEnterDelay={50}
+        mouseLeaveDelay={70}
+        onClose={[Function]}
+        onMount={[Function]}
+        onOpen={[Function]}
+        onUnmount={[Function]}
+        openOnTriggerClick={false}
+        openOnTriggerFocus={true}
+        openOnTriggerMouseEnter={true}
+        trigger={
           <Icon
+            aria-label="It is too early for extending the loan. You can request an extension from
+    January 25."
             as="i"
             name="info"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
+            role="button"
+            tabIndex={0}
+          />
+        }
+        triggerRef={
+          Object {
+            "current": <i
+              aria-label="It is too early for extending the loan. You can request an extension from
+    January 25."
+              class="info icon"
+              role="button"
+              tabindex="0"
+            />,
+          }
+        }
+      >
+        <Ref
+          innerRef={[Function]}
+        >
+          <RefFindNode
+            innerRef={[Function]}
           >
-            <i
-              aria-hidden="true"
-              className="info icon"
+            <Icon
+              aria-label="It is too early for extending the loan. You can request an extension from
+    January 25."
+              as="i"
+              name="info"
               onBlur={[Function]}
               onClick={[Function]}
               onFocus={[Function]}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
-            />
-          </Icon>
-        </RefFindNode>
-      </Ref>
-    </Portal>
-  </Popup>
+              role="button"
+              tabIndex={0}
+            >
+              <i
+                aria-label="It is too early for extending the loan. You can request an extension from
+    January 25."
+                className="info icon"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                role="button"
+                tabIndex={0}
+              />
+            </Icon>
+          </RefFindNode>
+        </Ref>
+      </Portal>
+    </Popup>
+  </PopupIcon>
   <Button
     as="button"
     color="blue"
