@@ -40,10 +40,10 @@ class SearchMessage extends Component {
         <Icon name="info circle" />
         <Overridable id="SearchResults.NoResults.extra">
           <Message.Content>
-            <h4 className="search-no-results-extra">
+            <p className="search-no-results-extra">
               Please fill in {requestFormLink} to request new additions or
               purchases to the catalogue. (Login required)
-            </h4>
+            </p>
           </Message.Content>
         </Overridable>
       </Message>

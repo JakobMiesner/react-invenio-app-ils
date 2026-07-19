@@ -24,8 +24,12 @@ class HttpError extends Component {
             <Grid.Column>
               <Icon name={icon} size="massive" />
               <h1>{title}</h1>
-              <h3>{message}</h3>
-              {errorId ? <h4> Error Id: {errorId}</h4> : null}
+              <h2>{message}</h2>
+              {errorId ? (
+                <p>
+                  <strong>Error Id:</strong> {errorId}
+                </p>
+              ) : null}
               {!isBackOffice && (
                 <Link to="/">
                   <Button icon labelPosition="left" primary>
